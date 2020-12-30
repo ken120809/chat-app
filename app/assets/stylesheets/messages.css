@@ -9,14 +9,48 @@
 }
 
 .side_main {
+  width: 300px;
   height: 100px;
   padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user_name a{
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.create_chat a{
+  color: deepskyblue;
+  font-size: 10px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  text-decoration: none;
 }
 
 .side_bottom {
   height: calc(100vh - 100px);
   background-color: #2F3E51;
-  padding: 0px 20px;
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.rooms {
+  padding: 20px 0 40px;
+}
+
+.room a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.side_chat_index a{
+  color: white;
+  text-decoration: none;
 }
 
 .chat_screen {
@@ -26,17 +60,20 @@
 }
 
 .chat_top {
+  width: calc(100vw - 300px);
   height: 100px;
   padding: 0px 40px;
 }
 
 .chat_main {
+  width: calc(100vw - 300px);
   height: calc(100vh - 190px);
   background-color: #FAFAFA;
   padding: 46px 40px 0px 40px;
 }
 
 .chat_bottom {
+  width: calc(100vw - 300px);
   height: 90px;
   background-color: #DDDDDD;
   padding: 20px 40px;
