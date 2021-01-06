@@ -1,48 +1,23 @@
 <div class="chat_top">
   <div class="chat_vew">
-    hogefuga
+    <%= @room.name %>
   </div>
   <div class="chat_end">
-    <%=link_to 'チャットを終了する' , '#'%>
+    <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
   </div>
 </div>
 
 <div class="chat_main">
-  <div class="chat_date">
-    <div class="chat_name">
-      Tom
-    </div>
-    <div class="chat_day">
-      2021/01/02
-    </div>
-  </div>
-  <div class="chat_messages">
-    <div class="chat_message">
-      おはよう
-    </div>
-  </div>
-   <div class="chat_date">
-    <div class="chat_name">
-      Tom
-    </div>
-    <div class="chat_day">
-      2021/01/02
-    </div>
-  </div>
-  <div class="chat_messages">
-    <div class="chat_message">
-      りんご
-    </div>
-  </div>
+   <%= render partial: 'message', collection: @messages %>
 </div>
 
-<div class="chat_bottom">
+<%= form_with model: [@room, @message], class: 'chat_bottom', local: true do |f| %>
   <div class="form_input">
-    <input class="message_form" placeholder= "type a message">
+    <%= f.text_field :message, class: 'message_form', placeholder: 'type a message' %>
     <label class="image_form">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form_submit" type=submit value= "送信">
-</div>
+  <%= f.submit '送信', class: 'form_submit' %>
+<% end %>
