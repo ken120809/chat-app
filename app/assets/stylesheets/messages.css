@@ -86,12 +86,13 @@
   width: calc(100vw - 300px);
   height: calc(100vh - 190px);
   background-color: #FAFAFA;
-  padding: 46px 40px 0px 40px;
+  padding: 46px 40px 0;
   overflow: scroll;
 }
 
 .chat_date {
   display: flex;
+
 }
 
 .chat_name {
@@ -107,12 +108,13 @@
 }
 
 .chat_messages {
-  padding-bottom: 40px;
+  padding-top: 10px;
 }
 
 .chat_message {
   font-size: 14px;
   color: #434a54;
+  margin-bottom: 40px;
 }
 
 .chat_bottom {
